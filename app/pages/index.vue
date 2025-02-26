@@ -1,53 +1,48 @@
-<script lang="ts" setup>
-const nuxtApp = useNuxtApp()
-
-const baseUrl = ref(nuxtApp.$config.public.BASE_URL)
-const nuxtVersion = ref(nuxtApp.versions.nuxt)
-
-// example use layers
-const { first } = await useCatCatalog()
-
-const { t } = useI18n()
-</script>
-
 <template>
   <div class="app-page-home">
-    <h1 class="app-page-home__title">
-      {{ t('welcome') }}
-    </h1>
+    <div class="app-page-home__banner">
+      <ui-banner />
+    </div>
 
-    <icon name="asset:reorder" size="16" />
+    <div class="app-page-home__bio">
+      <entity-home-bio />
+    </div>
 
-    <p>This is production: Nuxt Core Template v{{ nuxtVersion }}</p>
+    <div class="app-page-home__slider">
+      <ui-slider />
+    </div>
 
-    <p>Host: {{ baseUrl }}</p>
-
-    <template v-if="first?.id">
-      <p>Your unique cat</p>
-      <img
-        :src="first.url"
-        :alt="first.id"
-        class="app-page-home__cat"
-      >
-    </template>
+    <div class="app-page-home__action-row">
+      <ui-button @click="download">Скачать репертуар</ui-button>
+    </div>
   </div>
 </template>
 
+<script lang="ts" setup>
+function download() {
+  window.open('/web/Репертуар-2025.pdf', '_blank')
+}
+</script>
+
 <style lang="scss">
 .app-page-home {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-family: Roboto, system-ui;
+  &__bio,
+  &__slider {
+    margin-top: 40rem;
 
-  &__title {
-    color: #00dc82;
+    @include bp-tablet-min {
+      margin-top: 60rem;
+    }
+
+    @include bp-desktop-xs-min {
+      margin-top: 80rem;
+    }
   }
 
-  &__cat {
-    max-width: 50vw;
-    max-height: 50vh;
-    object-fit: cover;
+  &__action-row {
+    margin-top: 40rem;
+    text-align: center;
+    margin-bottom: 40rem;
   }
 }
 </style>

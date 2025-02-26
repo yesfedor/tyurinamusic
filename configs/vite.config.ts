@@ -5,7 +5,8 @@ export default <Partial<NuxtOptions['vite']>> {
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "~/assets/stylesheets/additional.scss" as *;
+          @use '~/assets/stylesheets/abstracts/mixins' as *;
+          @use '~/assets/stylesheets/abstracts/variables' as *;
         `,
       },
     },

@@ -8,9 +8,9 @@
 @use 'vendors/base' as *;
 
 /* 3. base */
+@use 'base/reset' as *;
 @use 'base/animations' as *;
 @use 'base/base' as *;
-@use 'base/reset' as *;
 @use 'base/typography' as *;
 
 /* 4. partials - layout */

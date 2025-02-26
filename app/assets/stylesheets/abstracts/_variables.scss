@@ -2,9 +2,23 @@
 $scrollbar-width: 4px;
 $breakpoints: (
   desktop: 1920px,
-  desktop-xs: 1200px,
+  desktop-xs: 1199px,
   tablet: 1199px,
-  tablet-xs: 768px,
+  tablet-xs: 767px,
   mobile: 767px,
   mobile-xs: 0,
+);
+
+$colors: (
+  base: #fafafa,
+  base-text: #000000,
+  header-bg: #5a000088,
+  header-text: #fafafa,
+  navbar-link-active: #ff0000,
+  button-bg: #ffffff,
+  button-text: #242424,
+  button-on-bg: #242424,
+  button-on-text: #ffffff,
+  scrollbar-thumb: #ff0000,
+  scrollbar-track: #fafafa,
 );

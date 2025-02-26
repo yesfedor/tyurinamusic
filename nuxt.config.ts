@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     // https://eslint.nuxt.com/packages/module
     '@nuxt/eslint',
     // https://nuxt.com/modules/stylelint
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
     // https://nuxt.com/modules/pinia
     '@pinia/nuxt',
     // https://nuxt.com/modules/vite-pwa-nuxt
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     // https://nuxt.com/modules/device
     '@nuxtjs/device',
     // https://storybook.nuxtjs.org/getting-started/setup
-    '@nuxtjs/storybook',
+    // '@nuxtjs/storybook',
   ],
 
   ssr: Boolean(process.env.NUXT_SSR),
@@ -96,6 +96,14 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-09-09',
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => {
+        return tag.includes('swiper-')
+      },
+    },
+  },
+
   vite: viteConfig,
 
   eslint: {
@@ -141,11 +149,11 @@ export default defineNuxtConfig({
 
   pwa: pwaConfig,
 
-  storybook: {
-    route: '/_storybook',
-    port: Number(process.env.STORYBOOK_PORT || 8081),
-    enabled: !process.env.APP_IS_PROD,
-  },
+  // storybook: {
+  //   route: '/_storybook',
+  //   port: Number(process.env.STORYBOOK_PORT || 8081),
+  //   enabled: !process.env.APP_IS_PROD,
+  // },
 
-  stylelint: {},
+  // stylelint: {},
 })

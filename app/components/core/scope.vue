@@ -16,6 +16,7 @@ provide(props.name, {
     <nuxt-loading-indicator
       :throttle="0"
       :duration="5e3"
+      color="#ff0000"
     />
   </section>
 </template>

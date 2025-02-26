@@ -1,5 +1,97 @@
+@use 'sass:map';
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+@import "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+
+html {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(1vw / 3.6);
+  line-height: normal;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 4rem;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: map.get($colors, "scrollbar-thumb");
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5rem;
+    background: map.get($colors, "scrollbar-track");
+  }
+
+  @include bp-tablet-min {
+    font-size: calc(1vw / 7.68)
+  }
+
+  @include bp-desktop-xs-min {
+    font-size: calc(1vw / 19.2);
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-size: 24rem;
+  background: map.get($colors, 'base');
+  word-break: break-word;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  transition: all 100ms;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  color: map.get($colors, 'base-text');
+  font-size: 24rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 48rem;
+
+  @include bp-tablet-min {
+    font-size: 56rem;
+  }
+
+  @include bp-desktop-xs-min {
+    font-size: 64rem;
+  }
+}
+
+h2 {
+  font-size: 36rem;
+
+  @include bp-tablet-min {
+    font-size: 44rem;
+  }
+
+  @include bp-desktop-xs-min {
+    font-size: 52rem;
+  }
+}
+
+.font-alt {
+  font-family: "Inter", serif;
 }
