@@ -46,6 +46,7 @@
     bottom: 0;
     z-index: -1;
     filter: brightness(0.45);
+    user-select: none;
   }
 
   &__background-image {
