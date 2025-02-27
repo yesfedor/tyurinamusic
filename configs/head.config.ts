@@ -85,34 +85,28 @@ export default <Partial<NuxtOptions['app']['head']>>{
   ],
   link: [
     {
-      rel: 'apple-touch-icon',
-      sizes: '120x120',
-      href: '/favicon/apple-touch-icon.png?v=1.0',
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon/favicon-96x96.png?v=2.0',
+      sizes: '96x96',
     },
     {
       rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/favicon/favicon-32x32.png?v=1.0',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      href: '/favicon/favicon-16x16.png?v=1.0',
-    },
-    {
-      rel: 'manifest',
-      href: '/favicon/site.webmanifest?v=1.0',
-    },
-    {
-      rel: 'mask-icon',
-      href: '/favicon/safari-pinned-tab.svg?v=1.0',
-      color: '#232323',
+      type: 'image/svg+xml',
+      href: '/favicon/favicon.svg?v=2.0',
     },
     {
       rel: 'shortcut icon',
-      href: '/favicon/favicon.ico?v=1.0',
+      href: '/favicon/favicon.ico?v=2.0',
+    },
+    {
+      rel: 'apple-touch-icon',
+      href: '/favicon/apple-touch-icon.png?v=2.0',
+      sizes: '180x180',
+    },
+    {
+      rel: 'manifest',
+      href: '/favicon/site.webmanifest?v=2.0',
     },
   ],
   style: [],

@@ -6,14 +6,18 @@
         на выступление
       </h2>
       <div class="ui-block-performance__action">
-        <ui-button variant="secondary">Оставить заявку</ui-button>
+        <ui-button variant="secondary" @click="openLink">
+          Оставить заявку
+        </ui-button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-
+function openLink() {
+  window.open('https://vk.me/tyurinamusic', '_blank')
+}
 </script>
 
 <style lang="scss">
