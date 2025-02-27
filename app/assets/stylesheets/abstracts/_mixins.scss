@@ -49,3 +49,19 @@
     @content;
   }
 }
+
+@mixin px-container {
+  margin: 0 auto;
+  padding: 0 12rem;
+  max-width: 336rem;
+  position: relative;
+
+  @include bp-tablet-min {
+    max-width: 736rem;
+    padding: 0 24rem;
+  }
+
+  @include bp-desktop-xs-min {
+    max-width: 1170rem;
+  }
+}

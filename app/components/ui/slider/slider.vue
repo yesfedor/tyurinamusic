@@ -69,7 +69,7 @@ const slides = ref<SlideItem[]>([
   }
 
   &__swiper {
-    --swiper-pagination-color: #{map.get($colors, 'scrollbar-thumb')};
+    --swiper-pagination-color: #{map.get($colors, 'button-bg')};
   }
 }
 </style>
