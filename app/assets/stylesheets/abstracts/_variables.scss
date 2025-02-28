@@ -12,8 +12,9 @@ $breakpoints: (
 $colors: (
   base: #fafafa,
   base-text: #000000,
-  header-bg: #5a000088,
-  header-text: #fafafa,
+  header-bg: transparent,
+  header-shadow: #470000,
+  header-text: #ffffff,
   navbar-link-active: #ff0000,
   button-bg: #ffffff,
   button-text: #242424,

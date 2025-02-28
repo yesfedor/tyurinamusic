@@ -37,12 +37,12 @@ withDefaults(defineProps<Props>(), {
 
   &--variant_primary {
     padding: 18rem 20rem;
-    color: map.get($colors, 'header-text');
+    color: map.get($colors, 'base');
     background: map.get($colors, 'navbar-link-active');
 
     &:hover,
     &:focus {
-      color: map.get($colors, 'header-text');
+      color: map.get($colors, 'base');
       background: map.get($colors, 'navbar-link-active');
     }
   }

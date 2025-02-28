@@ -51,7 +51,7 @@ const menu = ref<MenuItem[]>([
     &:hover,
     &:active,
     &:focus {
-      color: map.get($colors, 'navbar-link-active');
+      color: map.get($colors, 'header-text');
     }
   }
 }

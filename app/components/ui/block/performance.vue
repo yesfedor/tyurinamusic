@@ -1,11 +1,11 @@
 <template>
   <div class="ui-block-performance">
     <div class="ui-block-performance__container">
-      <h2 class="ui-block-performance__title">
+      <h2 class="ui-block-performance__title" v-motion-slide-visible-once-left>
         Оставить заявку
         на выступление
       </h2>
-      <div class="ui-block-performance__action">
+      <div class="ui-block-performance__action" v-motion-slide-visible-once-right>
         <ui-button variant="secondary" @click="openLink">
           Оставить заявку
         </ui-button>

@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-banner">
+  <div id="js-banner" class="ui-banner">
     <div class="ui-banner__background-container">
       <img
         src="/web/banner.jpg"
@@ -8,16 +8,21 @@
       >
     </div>
     <div class="ui-banner__content">
-      <h1 class="ui-banner__title">АЛЁНА ТЮРИНА</h1>
+      <h1 class="ui-banner__title" v-motion-slide-visible-once-top>
+        Алёна Тюрина
+      </h1>
 
-      <h3 class="ui-banner__subtitle">исполнительница, солистка филармонии</h3>
+      <h3 class="ui-banner__subtitle" v-motion-slide-visible-left>
+        Исполнительница, солистка филармонии
+      </h3>
 
       <ui-quote
         text="Цель музыки — трогать сердца."
         author="Иоганн Себастьян Бах"
+        v-motion-slide-visible-right
       />
 
-      <ui-block-social />
+      <ui-block-social v-motion-slide-visible-bottom />
     </div>
   </div>
 </template>
@@ -106,6 +111,7 @@
     font-size: 48rem;
     font-weight: 400;
     text-align: center;
+    text-transform: uppercase;
 
     @include bp-tablet-min {
       font-size: 56rem;

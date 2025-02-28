@@ -1,6 +1,6 @@
 <template>
   <div class="entity-home-bio">
-    <div class="entity-home-bio__content">
+    <div class="entity-home-bio__content" v-motion-slide-visible-once-left>
       <header class="entity-home-bio__header">
         <h1 class="entity-home-bio__title">Биография:</h1>
       </header>
@@ -14,7 +14,7 @@
         В 17 лет я впервые спела с джазовым оркестром, а в 18 лет начала солировать с оркестрами Ульяновской государственной филармонии: с народным, симфоническим и духовым. Помимо оркестров выступаю сольно, с джаз-бендами и другими лучшими музыкальными коллективами города. Являюсь педагогом по вокалу. Гастролирую сольно, а также с оркестрами и музыкальными коллективами по всей России.
       </p>
     </div>
-    <div class="entity-home-bio__image-container">
+    <div class="entity-home-bio__image-container" v-motion-slide-visible-once-right>
       <img src="/web/bio.jpg" alt="Биография" class="entity-home-bio__image">
     </div>
   </div>

@@ -45,6 +45,7 @@ body {
   font-size: 24rem;
   background: map.get($colors, 'base');
   word-break: break-word;
+  overflow-x: hidden;
 }
 
 html,
@@ -56,7 +57,7 @@ body {
 *,
 *::before,
 *::after {
-  transition: all 100ms;
+  transition: color 200ms, background 200ms;
   box-sizing: border-box;
 }
 
