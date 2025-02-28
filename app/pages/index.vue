@@ -19,6 +19,47 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+  meta: [
+    {
+      property: 'og:url',
+      content: 'https://tyurinamusic.com/',
+    },
+  ],
+  link: [
+    {
+      key: 'canonical',
+      rel: 'canonical',
+      href: 'https://tyurinamusic.com',
+    },
+    {
+      key: 'shortlink',
+      rel: 'shortlink',
+      href: 'https://tyurinamusic.com',
+    },
+  ],
+  script: [
+    {
+      key: 'schema:breadcrumbs',
+      type: 'application/ld+json',
+      innerHTML: `
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Биография",
+      "item": "https://tyurinamusic.com/"
+    }
+  ]
+}
+      `,
+    },
+  ],
+})
+
 function download() {
   window.open('/web/Репертуар-2025.pdf', '_blank')
 }

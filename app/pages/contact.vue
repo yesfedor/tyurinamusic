@@ -35,6 +35,48 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+  title: 'Алёна Тюрина (@alenaqqll) - Контакты',
+  meta: [
+    {
+      property: 'og:url',
+      content: 'https://tyurinamusic.com/contact',
+    },
+  ],
+  link: [
+    {
+      key: 'canonical',
+      rel: 'canonical',
+      href: 'https://tyurinamusic.com/contact',
+    },
+    {
+      key: 'shortlink',
+      rel: 'shortlink',
+      href: 'https://tyurinamusic.com/contact',
+    },
+  ],
+  script: [
+    {
+      key: 'schema:breadcrumbs',
+      type: 'application/ld+json',
+      innerHTML: `
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Контакты",
+      "item": "https://tyurinamusic.com/contact"
+    }
+  ]
+}
+      `,
+    },
+  ],
+})
+
 interface LinkItem {
   icon: string
   url: string

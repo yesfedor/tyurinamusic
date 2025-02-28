@@ -1,7 +1,10 @@
 import type { NuxtOptions } from '@nuxt/schema'
 
 export default <Partial<NuxtOptions['app']['head']>>{
-  title: process.env.NUXT_BASE_TITLE,
+  htmlAttrs: {
+    lang: 'ru-RU',
+  },
+  title: 'Алёна Тюрина (@alenaqqll) - Официальный сайт',
   meta: [
     {
       name: 'viewport',
@@ -9,6 +12,10 @@ export default <Partial<NuxtOptions['app']['head']>>{
     },
     {
       charset: 'utf-8',
+    },
+    {
+      name: 'robots',
+      content: 'index, follow',
     },
     {
       name: 'description',
@@ -56,19 +63,15 @@ export default <Partial<NuxtOptions['app']['head']>>{
     },
     {
       property: 'og:title',
-      content: 'Алёна Тюрина (@alenaqqll) - исполнительница, солистка филармонии',
-    },
-    {
-      property: 'og:url',
-      content: 'https://tyurinamusic.fiv.dev/',
+      content: 'Алёна Тюрина (@alenaqqll) - Официальный сайт',
     },
     {
       property: 'og:image',
-      content: 'https://tyurinamusic.fiv.dev/web/bio.jpg',
+      content: 'https://tyurinamusic.com/web/schema.jpg',
     },
     {
       property: 'og:description',
-      content: 'исполнительница, солистка филармонии',
+      content: 'Солистка Ульяновской государственной филармонии, педагог по вокалу. Лауреат международных конкурсов. Выступает с симфоническими, народными и джазовыми оркестрами.',
     },
     {
       property: 'profile:first_name',
@@ -84,6 +87,10 @@ export default <Partial<NuxtOptions['app']['head']>>{
     },
   ],
   link: [
+    {
+      rel: 'profile',
+      href: 'https://gmpg.org/xfn/11',
+    },
     {
       rel: 'icon',
       type: 'image/png',
@@ -112,31 +119,89 @@ export default <Partial<NuxtOptions['app']['head']>>{
   style: [],
   script: [
     {
+      key: 'schema:website',
       type: 'application/ld+json',
       innerHTML: `
 {
-  "@context": "https://schema.org/",
+  "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Алёна Тюрина (@alenaqqll) - исполнительница, солистка филармонии",
-  "url": "https://tyurinamusic.fiv.dev/"
+  "@id": "https://tyurinamusic.com/#website",
+  "name": "Алёна Тюрина - Официальный сайт",
+  "url": "https://tyurinamusic.com/",
+  "image": "https://tyurinamusic.com/web/schema.jpg",
+  "about": {"@id": "https://tyurinamusic.com/#person"}
 }
       `,
     },
     {
+      key: 'schema:person',
       type: 'application/ld+json',
       innerHTML: `
 {
-  "@context": "https://schema.org/",
+  "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://tyurinamusic.com/#person",
   "name": "Алёна Тюрина",
-  "url": "https://tyurinamusic.fiv.dev/",
-  "image": "https://tyurinamusic.fiv.dev/web/bio.jpg",
+  "description": "Солистка Ульяновской государственной филармонии, педагог по вокалу. Лауреат международных конкурсов. Выступает с симфоническими, народными и джазовыми оркестрами.",
+  "skills": "Джазовый вокал, академическое пение, импровизация",
+  "jobTitle": ["Солистка филармонии", "Педагог по вокалу", "Эстрадно-джазовая вокалистка"],
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Музыкальное училище им. Г.И. Шадриной",
+      "description": "Специальность: «Эстрадно-джазовое пение»",
+      "award": "Диплом с отличием"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Санкт-Петербургский институт культуры",
+      "description": "Текущее место обучения"
+    }
+  ],
+  "award": [
+    "Гран-при и первые премии всероссийских и международных конкурсов (Ульяновск, Димитровград, Чебоксары, Казань, Санкт-Петербург)"
+  ],
+  "memberOf": [
+    {
+      "@type": "MusicGroup",
+      "name": "Симфонический оркестр Ульяновской филармонии"
+    },
+    {
+      "@type": "MusicGroup",
+      "name": "Народный оркестр Ульяновской филармонии"
+    }
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Ульяновская государственная филармония"
+  },
   "sameAs": [
     "https://t.me/alenaqqll",
     "https://vk.com/tyurinamusic",
-    "https://www.instagram.com/alenaqql",
+    "https://www.instagram.com/alenaqql"
   ],
-  "jobTitle": "Исполнительница"
+  "homeLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ульяновск",
+      "addressCountry": "Россия"
+    }
+  },
+  "affiliation": {
+    "@type": "EducationalOrganization",
+    "name": "Санкт-Петербургский институт культуры",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Санкт-Петербург",
+      "addressCountry": "Россия"
+    }
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Диплом с отличием музыкальной школы",
+    "educationalLevel": "Начальное музыкальное образование"
+  }
 }
       `,
     },
