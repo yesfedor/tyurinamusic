@@ -9,7 +9,9 @@
     </div>
 
     <div class="app-page-home__slider">
-      <ui-slider />
+      <client-only>
+        <ui-slider />
+      </client-only>
     </div>
 
     <div class="app-page-home__action-row">

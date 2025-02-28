@@ -41,6 +41,7 @@
     "@vee-validate/yup": "^4.12.6",
     "@vite-pwa/nuxt": "^0.10.5",
     "@vue/test-utils": "^2.4.6",
+    "@vueuse/components": "^12.7.0",
     "@vueuse/motion": "^2.2.6",
     "@vueuse/nuxt": "^12.7.0",
     "ajv": "^8.17.1",
@@ -63,6 +64,7 @@
     "swiper": "^11.2.4",
     "vite-plugin-eslint2": "^5.0.2",
     "vue": "latest",
+    "vue-easy-lightbox": "^1.19.0",
     "vue-router": "^4.4.5",
     "yup": "^1.6.1"
   }

@@ -29,7 +29,9 @@
         </a>
       </div>
 
-      <ui-slider />
+      <client-only>
+        <ui-slider />
+      </client-only>
     </div>
   </div>
 </template>
