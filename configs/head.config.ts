@@ -177,8 +177,7 @@ export default <Partial<NuxtOptions['app']['head']>>{
   },
   "sameAs": [
     "https://t.me/alenaqqll",
-    "https://vk.com/tyurinamusic",
-    "https://www.instagram.com/alenaqql"
+    "https://vk.com/tyurinamusic"
   ],
   "homeLocation": {
     "@type": "Place",

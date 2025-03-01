@@ -32,11 +32,6 @@ const social = ref<SocialItem[]>([
     title: 'vk',
   },
   {
-    url: 'https://www.instagram.com/alenaqql',
-    icon: 'asset:instagram',
-    title: 'instagram',
-  },
-  {
     url: 'https://wa.me/79622888873',
     icon: 'asset:whatsapp',
     title: 'whatsapp',
